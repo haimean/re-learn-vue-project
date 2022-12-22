@@ -1,10 +1,19 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <layout-header />
   <router-view />
 </template>
+
+<script>
+// @ is an alias to /src
+import LayoutHeader from "@/components/Layout/LayoutHeader.vue";
+
+export default {
+  name: "HomeView",
+  components: {
+    LayoutHeader,
+  },
+};
+</script>
 
 <style>
 #app {
